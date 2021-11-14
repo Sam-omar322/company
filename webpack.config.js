@@ -7,6 +7,7 @@ module.exports = {
     entry: "./src/js/index.js",
 
     output: {
+      publicPath: '/',
         path: path.resolve(__dirname, "build"),
         filename: "js/bundle.js"
     },
@@ -21,15 +22,48 @@ module.exports = {
 
     module: {
         rules: [
+          
+          {
+            test: /\.html$/i,
+            loader: 'html-loader',
+          },
+
           {
             test: /\.(sass|css|scss)$/,
             use: [
-              // Extract css
-              MiniCssExtractPlugin.loader,
-              // Translates CSS into CommonJS
-              "css-loader",
-              // Compiles Sass to CSS
-              "sass-loader",
+              {
+                 loader: MiniCssExtractPlugin.loader,
+                  options: {
+                    publicPath: '../'
+                  }
+                },
+                "css-loader",
+                "sass-loader"
+              ],
+          },
+
+          {
+            test: /\.(png|jpe?g|gif)$/i,
+            use: [
+              {
+                loader: 'file-loader',
+                options: {
+                  name: '[name].[ext]',
+                  outputPath: "images",
+                }
+              },
+            ],
+          },
+          {
+            test: /\.(svg|eot|woff|woff2|ttf)$/i,
+            use: [
+              {
+                loader: 'file-loader',
+                options: {
+                  name: '[name].[ext]',
+                  outputPath: "fonts",
+                }
+              },
             ],
           },
         ],
