@@ -8,4 +8,4 @@ import "../sass/style.scss";
 $(function() {
     var copyright = "جميع حقوق محفوظة " + new Date().getFullYear() + " SamCode";
     $('.footer-end .copyright span').text(copyright);
-})
+});
