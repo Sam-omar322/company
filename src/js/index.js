@@ -5,4 +5,7 @@ import "popper.js/dist/popper.min";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "../sass/style.scss";
 
-console.log("Hello webpack");
+$(function() {
+    var copyright = "جميع حقوق محفوظة " + new Date().getFullYear() + " SamCode";
+    $('.footer-end .copyright span').text(copyright);
+})

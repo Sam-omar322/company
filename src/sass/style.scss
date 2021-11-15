@@ -8,7 +8,7 @@ $main-blue-hover: darken($main-blue, 25%);
     src: url(../fonts/Cairo-Regular.ttf);
 }
 
-/* global custom section */
+/* global custom Elements */
 .custom-btn {
     padding: 10px 20px;
     color: $main-black !important;
@@ -114,6 +114,7 @@ body {
                 background-size: cover;
                 img {
                     height: 500px;
+                    width: 100%;
                 }
                 .carousel-caption {
                     bottom: 75px !important;
@@ -166,7 +167,7 @@ body {
                     }
                     &:hover .card-body {
                         display: block;
-                        height: 220px;
+                        height: 190px;
                         min-height: 1px;
                         padding: 1.25rem;
                         opacity: 1;
@@ -191,7 +192,7 @@ body {
     .solid-side {
         background-color: $main-black;
         width: 100%;
-        height: 430px;
+        height: 400px;
     }
 }
 
@@ -205,6 +206,7 @@ body {
 .last-posts {
     .card {
         border-radius: 0.25rem;
+        box-shadow: 0 0 1px 0 #686868;
         img {
             border-end-end-radius: 90px;
             border-end-start-radius: 90px;
@@ -225,9 +227,108 @@ body {
     }
 }
 
+footer {
+    background-color: $main-black;
+    .footer-nav {
+        .footer-logo {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 50px;
+                height: 3px;
+                background-color: $main-white;
+                bottom: -7px;
+                right: 50%;
+                transform: translateX(50%);
+            }
+            img {
+                width: 75px;
+                height: 75px;
+            }
+        }
+        .menu-list {
+            margin-top: 30px;
+            li > a {
+                color: $main-white;
+                text-decoration: none;
+                font-size: 90%;
+                margin: 0 7px;
+                &:hover {
+                    color: $main-blue;
+                }
+            }
+        }
+    }
+    .container {
+        width: 60%;
+    }
+    .border-between > div+div {
+        border-top: 3px solid $main-white;
+        margin: 1.5rem auto;
+    }
+    .footer-sub {
+        label {
+            margin: 15px 0 20px;
+            color: $main-white;
+            font-size: 110%;
+        }
+        .input-group {
+            width: 45%;
+            margin: 0 auto;
+            .custom-input {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                text-align: right;
+                background-color: darken($main-black, 15%);
+                border: none;
+                padding: 1.5rem 1rem !important;
+            }
+            .custom-btn-sub {
+                border-radius: 0;
+            }
+        }
+    }
+    .footer-end {
+        .clearfix {
+            margin-top: 10px;
+            padding: 0 10px;
+            .copyright {
+                color: $main-white;
+            }
+            .social-media {
+                li > a {
+                    background-color: $main-white;
+                    color: $main-black;
+                    display: inline-block;
+                    width: 22px;
+                    height: 22px;
+                    line-height: 22px;
+                    text-align: center;
+                    transform: rotate(45deg);
+                    margin: 2px;
+                    transition: all .5s ease;
+                    &:hover {
+                        background-color: $main-blue;
+                    }
+                    i {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* media Section */
 
 @media (max-width: 991px) {
+    // global custom Elements
+    .custom-blog-btn {
+        padding: 2px 30px !important;
+        margin-top: -45px !important;
+        margin-bottom: 20px !important;
+    }
     .top-menu {
         .navbar {
             padding: 0 15px !important;
@@ -241,6 +342,9 @@ body {
     .carousel-top {
         .carousel-inner {
             .carousel-item {
+                img {
+                    width: auto !important;
+                }
             .carousel-caption {
                     text-align: center !important;
                     h2 {
@@ -262,17 +366,43 @@ body {
             }
         }
     }
+    .last-posts {
+        .card {
+            .card-body {
+                padding: 1rem !important;
+                .card-title {
+                    font-size: 15px;
+                }
+                .card-text {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    footer {
+        .container {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 767px) {
+    // global custom Elements
+    .custom-blog-btn {
+        padding: 10px 70px !important;
+    }
     .last-project {
         #carousel-last-project {
+            max-width: 100%;
+            right: 0;
+            padding-left: 15px;
+            padding-right: 15px;
             .carousel-inner {
                 .carousel-item {
                     .card {
                         .card-body {
                             display: block;
-                            height: 220px;
+                            height: 190px;
                             min-height: 1px;
                             padding: 1.25rem;
                             opacity: 1;
@@ -280,22 +410,30 @@ body {
                     }
                 }
             }
-            max-width: 100%;
-            right: 0;
-            padding-left: 10px;
-            padding-right: 10px;
+        }
+        .solid-side {
+            height: 150px;
+            padding-top: 70px;
             .carousel-btn {
-                right: 50%;
-                top: 380px;
-                transform: translateX(50%);
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
                 a {
-                    display: inline-block;
-                    line-height: 50px;
+                    position: static;
+                    border-radius: 50%;
+                    border: 1px solid #686868;
+                    width: 50px;
+                    height: 50px;
+                    top: 35%;
                 }
             }
         }
-        .solid-side {
-            height: 200px;
+    }
+    footer {
+        .footer-sub {
+            .input-group {
+                width: 80% !important;
+            }
         }
     }
 }
@@ -314,12 +452,20 @@ body {
             top: 20px;
             padding-left: 30px;
             padding-right: 30px;
-            .carousel-btn {
-                top: 400px;
-            }
         }
         .solid-side {
             height: 100px;
+            padding-top: 30px;
+        }
+    }
+    footer {
+        .footer-nav {
+            .menu-list {
+                li > a {
+                    margin: 0 3px;
+                    font-size: 85%;
+                }
+            }
         }
     }
 }
