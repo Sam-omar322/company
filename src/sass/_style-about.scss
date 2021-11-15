@@ -1,0 +1,74 @@
+.banner-about {
+    .banner-img {
+        background-image: url(../images/banner-about.jpg);
+    }
+}
+
+.our-team {
+    text-align: center;
+    .person-card {
+        width: 19rem;
+        .cover-img img {
+            width: 100%;
+        }
+        .person-img img {
+            margin-top: -58px;
+            border-radius: 50%;
+            border: 1px solid #EEE;
+            width: 110px;
+            height: 110px;
+            box-shadow: 0 0 5px 0 #686868;
+        }
+        .card-body {
+            .person-name {
+                font-size: 22px;
+                margin-top: 0.5rem;
+            }
+            .person-job {
+                font-size: 16px;
+                color: #7a7a7a;
+                position: relative;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -2px;
+                    right: 50%;
+                    width: 40px;
+                    height: 2px;
+                    background-color: $main-blue;
+                    transform: translateX(50%);
+                }
+            }
+            .person-description {
+                font-size: 14px;
+                margin: 14px 0;
+                font-weight: 600;
+                color: #a9a9a9;
+            }
+        }
+        .social-media {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            li > a {
+                background-color: $main-black;
+                color: $main-white;
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                transform: rotate(45deg);
+                margin: 2px 10px;
+                transition: all .5s ease;
+                &:hover {
+                    background-color: $main-blue;
+                }
+                i {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}

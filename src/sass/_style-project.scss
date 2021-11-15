@@ -1,0 +1,40 @@
+// global elements
+.btn-badge {
+    padding: 5px 13px;
+    right: 25px;
+    top: 20px;
+    box-shadow: 0 0 5px 0 #686868;
+    background-color: $main-white;
+    &:hover {
+        background-color: $main-black;
+        color: $main-white;
+    }
+}
+
+.banner-project {
+    .banner-img {
+        background-image: url(../images/projects-banner.jpg);
+    }
+}
+
+.our-works {
+    .project-card {
+        text-align: center;
+        width: 23rem;
+        .project-img {
+            position: relative;
+            a.btn {
+                position: absolute;
+            }
+            img {
+            width: 100%;
+            }
+        }
+        .card-body {
+            .project-name {
+                font-size: 1.5rem;
+                margin-bottom: 0.75rem;
+            }
+        }
+    }
+}
