@@ -78,21 +78,25 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/pages/index.html",
-            filename: "pages/index.html"
+          template: "./src/pages/index.html",
+          filename: "pages/index.html"
         }),
         new HtmlWebpackPlugin({
           template: "./src/pages/about.html",
           filename: "pages/about.html"
-      }),
-      new HtmlWebpackPlugin({
-        template: "./src/pages/projects.html",
-        filename: "pages/projects.html"
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/contact.html",
-      filename: "pages/contact.html"
-  }),
+        }),
+        new HtmlWebpackPlugin({
+          template: "./src/pages/contact.html",
+          filename: "pages/contact.html"
+        }),
+        new HtmlWebpackPlugin({
+          template: "./src/pages/projects.html",
+          filename: "pages/projects.html"
+        }),
+        new HtmlWebpackPlugin({
+          template: "./src/pages/project-details.html",
+          filename: "pages/project-details.html"
+        }),
         new MiniCssExtractPlugin({
             filename: "css/style.css"
         })
