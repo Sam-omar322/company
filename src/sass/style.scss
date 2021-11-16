@@ -1,12 +1,22 @@
 @import "_variables";
 @import "_style-project";
 @import "_style-about";
+@import "_style-contact";
+
 @font-face {
     font-family: "cairo-regular";
     src: url(../fonts/Cairo-Regular.ttf);
 }
 
 /* global custom Elements */
+.navbar-toggler {
+    box-shadow: 0 0 2px 0 #ffffff;
+    padding: 0.3rem 0.75rem;
+    border-radius: 1px;
+    &:focus {
+        outline: none !important;
+    }
+}
 .custom-btn {
     padding: 10px 20px;
     color: $main-black !important;
@@ -336,6 +346,7 @@ footer {
             right: 0;
             height: 100%;
             width: 100%;
+            padding-top: 60px;
             display: flex !important;
             align-items: center;
             justify-content: center;
