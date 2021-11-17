@@ -1,0 +1,100 @@
+.banner-blog {
+    .banner-img {
+        background-image: url(../images/banner-blog.jpg);
+    }
+}
+
+.posts {
+    .search-box {
+        padding: 15px;
+        margin-top: 5px;
+        box-shadow: 0 0 1px 1px rgba(66, 71, 76, 0.1);
+        border: 1px solid rgba(66, 71, 76, 0.1);
+    }
+    .post-card {
+        .card-body {
+            .card-text {
+                white-space: nowrap; // تميد الخط الى اخر
+                overflow: hidden; // حذف أسطر خارج عن المنطة
+                text-overflow: ellipsis; // إضافة ثلاث نقاط عن نهاية السطر
+                color: $card-text-color;
+            }
+        }
+    }
+}
+
+.blog-details {
+    .blog-card {
+        .card-body {
+            .card-title {
+                color: $main-blue;
+                font-weight: 800;
+            }
+            .card-text {
+                color: $card-text-color;
+            }
+        }
+        .c-footer {
+            .social-media {
+                margin-left: 15px;
+                margin-bottom: 0 !important;
+                li { 
+                    a {
+                    background-color: $main-white;
+                    color: $main-black;
+                    display: inline-block;
+                    border: 1px solid rgba(66, 71, 76, 0.3);
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
+                    text-align: center;
+                }
+                a.facebook-social {
+                    &:hover {
+                        background-color: #3B5998;
+                        i {color: #ffffff;}
+                    }
+                }
+                a.twitter-social {
+                    &:hover {
+                        background-color: #1da1f2;
+                        i {color: #ffffff;}
+                    }
+                }
+                a.linkedin-social {
+                    &:hover {
+                        background-color: #0077b0;
+                        i {color: #ffffff;}
+                    }
+                }
+                    i {
+                        color: rgba(66, 71, 76, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.banner-add-blog {
+    .banner-img {
+        background-image: url(../images/banner-add-blog.jpg);
+    }
+}
+
+.add-blog {
+    label:first-child {
+    font-size: 14px;
+    font-weight: bold;
+    }
+}
+
+@media (max-width: 991px) {
+    .posts {
+        .search-box {
+            .form-inline {
+                display: block !important;
+            }
+        }
+    }
+}

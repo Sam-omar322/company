@@ -83,3 +83,12 @@
         }
     }
 }
+
+@media (max-width: 575px) {
+    .project-details {
+        .thumb {
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+    }
+}

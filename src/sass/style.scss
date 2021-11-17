@@ -2,6 +2,7 @@
 @import "_style-project";
 @import "_style-about";
 @import "_style-contact";
+@import "_style-blog";
 
 @font-face {
     font-family: "cairo-regular";
@@ -33,12 +34,10 @@
     padding: 11px 14px !important;
     background-color: $main-blue !important;
     color:$main-white;
-    font-weight: bold;
     transition: all .5s ease;
     &:hover {
         color: #ffffff;
         background-color: $main-blue-hover !important;
-        font-weight: bold;
     }
 }
 
@@ -55,6 +54,13 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+.form-control {
+    &:focus {
+        border: 1px solid $main-blue !important;
+        box-shadow: none !important;
+    }
 }
 
 // main Elements 

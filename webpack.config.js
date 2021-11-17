@@ -81,22 +81,42 @@ module.exports = {
           template: "./src/pages/index.html",
           filename: "pages/index.html"
         }),
+
         new HtmlWebpackPlugin({
           template: "./src/pages/about.html",
           filename: "pages/about.html"
         }),
+
         new HtmlWebpackPlugin({
           template: "./src/pages/contact.html",
           filename: "pages/contact.html"
         }),
+
         new HtmlWebpackPlugin({
           template: "./src/pages/projects.html",
           filename: "pages/projects.html"
         }),
+
         new HtmlWebpackPlugin({
           template: "./src/pages/project-details.html",
           filename: "pages/project-details.html"
         }),
+
+        new HtmlWebpackPlugin({
+          template: "./src/pages/blog.html",
+          filename: "pages/blog.html"
+        }),
+
+        new HtmlWebpackPlugin({
+          template: "./src/pages/blog-details.html",
+          filename: "pages/blog-details.html"
+        }),
+
+        new HtmlWebpackPlugin({
+          template: "./src/pages/add-blog.html",
+          filename: "pages/add-blog.html"
+        }),
+        // CSS
         new MiniCssExtractPlugin({
             filename: "css/style.css"
         })

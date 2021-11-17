@@ -7,6 +7,16 @@ import "../sass/style.scss";
 
 $(function() {
 
+  // add active class to navbar-nav
+  var pathname = window.location.pathname;
+  $('.top-menu .navbar-nav a[href="'+pathname+'"]').parent().addClass('active');
+  if (pathname === "/project-details.html") {
+    $('.top-menu .navbar-nav a[href="/projects.html"]').parent().addClass('active');
+  }
+  if (pathname === "/add-blog.html" || pathname === "/blog-details.html") {
+    $('.top-menu .navbar-nav a[href="/blog.html"]').parent().addClass('active');
+  }
+
   let modalId = $('#image-gallery');
 
     loadGallery(true, 'a.thumbnail');
@@ -24,13 +34,13 @@ $(function() {
       }
     }
 
+    // load images
     function loadGallery(setIDs, setClickAttr) {
       let current_image,
         selector,
         counter = 0;
 
-      $('#show-next-image, #show-previous-image')
-        .click(function () {
+      $('#show-next-image, #show-previous-image').click(function () {
           if ($(this)
             .attr('id') === 'show-previous-image') {
             current_image--;
@@ -60,11 +70,16 @@ $(function() {
               .attr('data-image-id', counter);
           });
       }
-      $(setClickAttr)
-        .on('click', function () {
+      $(setClickAttr).on('click', function () {
           updateGallery($(this));
         });
     }
+
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
 
     var copyright = "جميع حقوق محفوظة " + new Date().getFullYear() + " SamCode";
     $('.footer-end .copyright span').text(copyright);
