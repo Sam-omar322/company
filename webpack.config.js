@@ -13,7 +13,8 @@ module.exports = {
     },
 
     devServer: {
-      contentBase: path.join(__dirname, "build/pages"),
+      contentBase: path.join(__dirname, "build"),
+      host: "192.168.1.15",
       open: true,
       port: 7878,
       writeToDisk: true,
@@ -43,7 +44,7 @@ module.exports = {
           },
 
           {
-            test: /\.(png|jpe?g|gif)$/i,
+            test: /\.(png|jpe?g|gif|webp)$/i,
             use: [
               {
                 loader: 'file-loader',
@@ -79,42 +80,42 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
           template: "./src/pages/index.html",
-          filename: "pages/index.html"
+          filename: "index.html"
         }),
 
         new HtmlWebpackPlugin({
           template: "./src/pages/about.html",
-          filename: "pages/about.html"
+          filename: "about.html"
         }),
 
         new HtmlWebpackPlugin({
           template: "./src/pages/contact.html",
-          filename: "pages/contact.html"
+          filename: "contact.html"
         }),
 
         new HtmlWebpackPlugin({
           template: "./src/pages/projects.html",
-          filename: "pages/projects.html"
+          filename: "projects.html"
         }),
 
         new HtmlWebpackPlugin({
           template: "./src/pages/project-details.html",
-          filename: "pages/project-details.html"
+          filename: "project-details.html"
         }),
 
         new HtmlWebpackPlugin({
           template: "./src/pages/blog.html",
-          filename: "pages/blog.html"
+          filename: "blog.html"
         }),
 
         new HtmlWebpackPlugin({
           template: "./src/pages/blog-details.html",
-          filename: "pages/blog-details.html"
+          filename: "blog-details.html"
         }),
 
         new HtmlWebpackPlugin({
           template: "./src/pages/add-blog.html",
-          filename: "pages/add-blog.html"
+          filename: "add-blog.html"
         }),
         // CSS
         new MiniCssExtractPlugin({

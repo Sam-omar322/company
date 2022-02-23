@@ -229,6 +229,7 @@ body {
         img {
             border-end-end-radius: 90px;
             border-end-start-radius: 90px;
+            width: 100%;
         }
         .card-body {
             a.btn {
@@ -512,6 +513,17 @@ footer {
                 li > a {
                     margin: 0 3px;
                     font-size: 85%;
+                }
+            }
+        }
+        .footer-end {
+            margin-bottom: 0 !important;
+            .clearfix {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .social-media {
+                    margin-top: 20px;
                 }
             }
         }
