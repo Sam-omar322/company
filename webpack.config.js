@@ -14,7 +14,6 @@ module.exports = {
 
     devServer: {
       contentBase: path.join(__dirname, "build"),
-      host: "192.168.1.15",
       open: true,
       port: 7878,
       writeToDisk: true,
